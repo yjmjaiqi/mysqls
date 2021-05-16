@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>选项卡</title>
+
+<link rel="stylesheet" href="/css/article.css">
+
+</head>
+<body>
+				<div id="logo">
+					<a href="indexs"><img src="/img/logo.png" alt="" title="" /></a>
+				</div>
+				<center>
+						<a href="about">关于</a>
+						<a href="indexs">撰写文章</a>
+						<a href="article">文章列表</a>
+						<a href="contact">联系</a>
+						<a href="single">个人信息页</a>
+						<a href="exitLogin">退出登录</a>
+				</center>
+<table class="join_zp" cellpadding="0" cellspacing="0">
+	<thead>
+	<tr class="join_zp_t">
+		<td>文章编号</td>
+		<td>文章名称</td>
+		<td>发布人</td>
+		<td>发布内容</td>
+		<td>发布时间</td>
+		<td colspan="2">编辑</td>
+	</tr>
+    </thead>
+	<%arr.foreach%>
+	<tbody class="join_con">
+		<% for(let o of arr){ %>
+			
+		<tr class="join_zp_c">
+				<td><%=o.articleId%></td>
+				<td><%=o.articleName%></td>
+				<td><%=o.author%></td>
+				<td><%=o.content%></td>
+				<td><%=o.create_time%></td>
+				<td><button>详情</button></td>
+				<td><button>删除</button></td>
+		</tr>
+		<% } %>
+		
+		<!-- </tr>
+		<tr class="join_zp_n">
+			<td colspan="5">
+				<div class="join_ms"><i></i>职位描述</div>
+				<div class="join_cn">
+					<p>职位描述1</p>
+					<p>职位描述2</p>
+				</div>
+				<div class="join_ms"><i></i>任职要求</div>
+				<div class="join_cn">
+					<p>任职要求1</p>
+					<p>任职要求2</p>
+				</div>
+			</td>
+		</tr>
+		<tr class="join_zp_c">
+			<td>岗位</td>
+			<td>技术类</td>
+			<td>5</td>
+			<td>浙江</td>
+			<td>2019-01-01</td>
+		</tr>
+		<tr class="join_zp_n">
+			<td colspan="5">
+				<div class="join_ms"><i></i>职位描述</div>
+				<div class="join_cn">
+					<p>职位描述1</p>
+					<p>职位描述2</p>
+				</div>
+				<div class="join_ms"><i></i>任职要求</div>
+				<div class="join_cn">
+					<p>任职要求1</p>
+					<p>任职要求2</p>
+				</div>
+			</td>
+		</tr>
+		<tr class="join_zp_c">
+			<td>岗位</td>
+			<td>技术类</td>
+			<td>5</td>
+			<td>浙江</td>
+			<td>2019-01-01</td>
+		</tr>
+		<tr class="join_zp_n">
+			<td colspan="5">
+				<div class="join_ms"><i></i>职位描述</div>
+				<div class="join_cn">
+					<p>职位描述1</p>
+					<p>职位描述2</p>
+				</div>
+				<div class="join_ms"><i></i>任职要求</div>
+				<div class="join_cn">
+					<p>任职要求1</p>
+					<p>任职要求2</p>
+				</div>
+			</td>
+		</tr> -->
+	</tbody>
+</table>
+<script src="/js/article.js"></script>
+
+</body>
+</html>

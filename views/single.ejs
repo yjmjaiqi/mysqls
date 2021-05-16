@@ -1,0 +1,72 @@
+
+<!doctype html>
+<html>
+<head design-width="750">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<title>Demo</title>
+<link rel="stylesheet" href="/css/single.css" /><!--页面样式-->
+
+<script src="/js/single.js"></script><!--设置字体大小-->
+
+<script src="/js/jquery-2.2.4.min.js"></script><!--设置字体大小-->
+
+</head>
+<body>
+	<div class="mobile-wrap center mobile-wrap-mb">
+        <main>
+        	<div class="inform">
+        		<h3>用户信息</h3>
+				<hr>
+        		<h3 style="color: red;">个人信息</h3>
+        		<div class="inform-text show">
+					<%for(let o of arr){%>
+        			<p>
+        				<span>
+        					用户名
+        				</span>
+        				<input type="text" value="<%-username%>" readonly/>
+        			</p>
+        			<p>
+        				<span>
+        					登录密码
+        				</span>
+        				<input type="text" value="<%-password%>" readonly/>
+        			</p>
+        			<p>
+        				<span>
+        					手机号码
+        				</span>
+        				<input type="text" value="<%-o.phone%>" readonly/>
+        			</p>
+        			<p>
+        				<span>
+        					邮箱
+        				</span>
+        				<input type="text" value="<%-o.email%>" readonly/>
+        			</p>
+					<%}%>
+        		</div>	
+        	</div>
+        </main>
+		<h4>
+			<center>
+			<a href="about">返回</a>
+			</center>
+		</h4>
+
+   </div><!--mobile_wrap-->
+</body>
+
+<script type="text/javascript">
+	$('.inform-list ul li').click(function(){
+		var n=$(this).index();
+		$(this).addClass('acti').siblings().removeClass('acti');
+		$('.inform-text').fadeOut();
+		$('.inform-text').eq(n).fadeIn();
+	})
+</script>
+</html>
